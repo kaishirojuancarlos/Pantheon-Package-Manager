@@ -1,0 +1,68 @@
+[package]
+name = "pantheon-package-manager"
+version = "1.1.0"
+edition = "2024"
+description = "An advanced, asyncronous package manager for Linux"
+license = "Mozilla Public License 2.0"
+
+[lib]
+name = "pantheon_library"
+path = "sources/library.rs"
+
+[[bin]]
+name = "pantheon_daemon"
+path = "sources/daemon.rs"
+
+[[bin]]
+name = "pantheon_client"
+path = "sources/client.rs"
+
+[dependencies]
+hive-utilities-library = {
+    path = "Hive-Utilities-Library"
+}
+
+toml = "1"
+
+sqlx = {
+    version = "0.9.0",
+    features = [
+        "sqlite",
+        "runtime-tokio",
+        "macros",
+        "uuid",
+        "migrate"
+    ]
+}
+notify-rust = "4"
+
+
+uuid = "1"
+thiserror = "2"
+tracing = "0.1"
+tokio = {
+    version = "1",
+    features = [
+        "full",
+        "rt-multi-thread",
+        "macros"
+    ]
+}
+
+nix = {
+    version = "0.31",
+    features = [
+        "user",
+        "process"
+    ]
+}
+users = "0.11"
+sudo = "0.6"
+zbus = {
+    version = "5",
+    features = [
+        "tokio"
+    ]
+}
+zbus_polkit = "5"
+
