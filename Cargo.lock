@@ -731,6 +731,7 @@ version = "1.1.0"
 dependencies = [
  "ciborium",
  "serde",
+ "sudo",
  "tokio",
  "toml",
 ]
@@ -1091,7 +1092,6 @@ dependencies = [
  "nix",
  "notify-rust",
  "sqlx",
- "sudo",
  "thiserror",
  "tokio",
  "toml",

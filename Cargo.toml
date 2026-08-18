@@ -57,7 +57,6 @@ nix = {
     ]
 }
 users = "0.11"
-sudo = "0.6"
 zbus = {
     version = "5",
     features = [
@@ -65,4 +64,3 @@ zbus = {
     ]
 }
 zbus_polkit = "5"
-
